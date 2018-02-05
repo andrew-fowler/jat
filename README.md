@@ -27,3 +27,17 @@ If you have ran the tool before it will remember the previous values and prompt 
 Once the tool is running, saving any changes to the specified Jenkinsfile should fire the pipeline and stream the results to your terminal.
 
 To exit the runner, ctrl-c.
+
+# TO DO
+
+- Create an installer to 
+ - npm install
+ - set an alias (alias watcher='node /Users/andrewfowler/projects/watcher/watcher.js')
+ - curl the latest cli client (if appropriate)
+- Add cli client to /bin
+- Add a choice for declarative / groovy pipelines
+- Remove eg()s from questions if there is an existing answer
+- Figure out how to get rid of dummy index.js
+
+# Issues
+- Removing index.js causes nodemon to re-fire the _watcher_, not the pipeline, upon jenkinsfile changes

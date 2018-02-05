@@ -50,7 +50,7 @@ function firePipeline(answers) {
 }
 
 inquirer.prompt(questions.spec).then(answers => {
-    fs.writeFileSync('answers.json', JSON.stringify(answers), 'utf8');
+    fs.writeFileSync(`${__dirname}/answers.json`, JSON.stringify(answers), 'utf8');
 
     validateUrl(answers.jenkins_url);
     validateUsername(answers.username);

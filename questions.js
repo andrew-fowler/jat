@@ -12,9 +12,9 @@ let default_answers = {
 };
 
 function getDefaultAnswers() {
-    let answersFilename = 'answers.json';
-    if (fs.existsSync(answersFilename)) {
-        return JSON.parse(fs.readFileSync(answersFilename, 'utf8'));
+    let answersFilepath = `${__dirname}/answers.json`;
+    if (fs.existsSync(answersFilepath)) {
+        return JSON.parse(fs.readFileSync(answersFilepath, 'utf8'));
     }
     return default_answers;
 }

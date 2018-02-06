@@ -27,7 +27,6 @@ module.exports = { spec: [
         name: 'jenkins_url',
         message: "What's your jenkins URL? (e.g. https://jenkins.example.com)",
         default: function () {
-            // return 'https://jenkins.pensions.sbx.zone';
             return answers.jenkins_url;
         }
     },
@@ -36,7 +35,6 @@ module.exports = { spec: [
         name: 'jenkins_username',
         message: "What's your jenkins username? (e.g. johnsmith)",
         default: function () {
-            // return 'andrew.fowler';
             return answers.jenkins_username;
         }
     },
@@ -45,7 +43,6 @@ module.exports = { spec: [
         name: 'jenkins_token',
         message: "What's your jenkins token/API key? (e.g. 1cd736c99432a2092c86e5f832783c73)",
         default: function () {
-            // return '7cd736c99432a2092e86e5f832783c73';
             return answers.jenkins_token;
         }
     },
@@ -54,7 +51,6 @@ module.exports = { spec: [
         name: 'repo_name',
         message: "What's your repo name? (e.g. authenticator)",
         default: function () {
-            // return 'rtl-pipeline-poc';
             return answers.repo_name;
         }
     },
@@ -63,16 +59,22 @@ module.exports = { spec: [
         name: 'branch_name',
         message: "What's your branch name? (e.g. AUTH-215)",
         default: function () {
-            // return 'acctest-example';
             return answers.branch_name;
         }
     },
+    {
+        type: 'confirm',
+        name: 'is_declarative',
+        message: "Is your pipeline Declarative? (If in doubt, choose No)",
+        default: function () {
+            return answers.is_declarative;
+        }
+    },    
     {
         type: 'input',
         name: 'cli_path',
         message: "What's the path to your Jenkins CLI? (e.g. /lib/jenkins-cli.jar)",
         default: function () {
-            // return '/Users/andrewfowler/projects/devops/jenkins-cli.jar';
             return answers.cli_path;
         }
     },
@@ -81,7 +83,6 @@ module.exports = { spec: [
         name: 'build_number',
         message: "What's the build number you'd like to base your replay on? (e.g. 1)",
         default: function () {
-            // return '91';
             return answers.build_number;
         }
     },
@@ -90,7 +91,6 @@ module.exports = { spec: [
         name: 'jenkinsfile_path',
         message: "What's the path to the jenkinsfile you'd like to use? (e.g. /projects/authenticator/Jenkinsfile)",
         default: function () {
-            // return '/Users/andrewfowler/projects/rtl-pipeline-poc/Jenkinsfile';
             return answers.jenkinsfile_path;
         }
     }

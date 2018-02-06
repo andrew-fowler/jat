@@ -6,6 +6,7 @@ let default_answers = {
     "jenkins_token":"8dc236c99432a2092e86e5f832783c73",
     "repo_name":"authenticator",
     "branch_name":"AUTH-215",
+    "is_declarative":false,
     "cli_path":"/Users/anonymous/jenkins-cli.jar",
     "build_number":"91",
     "jenkinsfile_path":"/Users/anonymous/projects/authenticator/Jenkinsfile"

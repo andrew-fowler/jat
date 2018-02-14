@@ -26,7 +26,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'jenkins_url',
-        message: "What's your jenkins URL? (e.g. https://jenkins.example.com)",
+        message: "What's your jenkins URL?",
         default: function () {
             return answers.jenkins_url;
         }
@@ -34,7 +34,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'jenkins_username',
-        message: "What's your jenkins username? (e.g. johnsmith)",
+        message: "What's your jenkins username?",
         default: function () {
             return answers.jenkins_username;
         }
@@ -42,7 +42,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'jenkins_token',
-        message: "What's your jenkins token/API key? (e.g. 1cd736c99432a2092c86e5f832783c73)",
+        message: "What's your jenkins token/API key?",
         default: function () {
             return answers.jenkins_token;
         }
@@ -50,7 +50,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'repo_name',
-        message: "What's your repo name? (e.g. authenticator)",
+        message: "What's your repo name?",
         default: function () {
             return answers.repo_name;
         }
@@ -58,7 +58,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'branch_name',
-        message: "What's your branch name? (e.g. AUTH-215)",
+        message: "What's your branch name?",
         default: function () {
             return answers.branch_name;
         }
@@ -66,7 +66,7 @@ module.exports = { spec: [
     {
         type: 'confirm',
         name: 'is_declarative',
-        message: "Is your pipeline Declarative? (If in doubt, choose No)",
+        message: "Is your pipeline Declarative?",
         default: function () {
             return answers.is_declarative;
         }
@@ -74,7 +74,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'cli_path',
-        message: "What's the path to your Jenkins CLI? (e.g. /lib/jenkins-cli.jar)",
+        message: "What's the path to your Jenkins CLI?",
         default: function () {
             return answers.cli_path;
         }
@@ -82,7 +82,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'build_number',
-        message: "What's the build number you'd like to base your replay on? (e.g. 1)",
+        message: "What's the build number you'd like to base your replay on?",
         default: function () {
             return answers.build_number;
         }
@@ -90,7 +90,7 @@ module.exports = { spec: [
     {
         type: 'input',
         name: 'jenkinsfile_path',
-        message: "What's the path to the jenkinsfile you'd like to use? (e.g. /projects/authenticator/Jenkinsfile)",
+        message: "What's the path to the Jenkinsfile you'd like to use?",
         default: function () {
             return answers.jenkinsfile_path;
         }

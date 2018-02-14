@@ -32,7 +32,6 @@ inquirer.prompt(questions.spec).then(answers => {
     validateJenkinsfilePath(answers.jenkinsfile_path);
     validateCliPath(answers.cli_path);
 
-    // nodemon(`-w ${answers.jenkinsfile_path}`);
     nodemon(`-C ${__dirname}/index.js -w ${answers.jenkinsfile_path}`);
     console.log(`>>> Watching: ${answers.jenkinsfile_path}`);
 

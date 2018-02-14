@@ -1,7 +1,4 @@
-let stored_answers = require('./questions');
 let fs = require('fs');
-
-console.log('IN INDEX!!!');
 
 function firePipeline(answers) {
     let job_string = `${answers.repo_name}/${answers.branch_name}`;
@@ -16,8 +13,6 @@ function firePipeline(answers) {
     let execution_string = `${lint_string} ` +
         `cat ${answers.jenkinsfile_path} | ${cli_exe} replay-pipeline ${job_string} -n ${answers.build_number} && ` +
         `${cli_exe} console ${job_string} -f`;
-
-    console.log(`Execution string: ${execution_string}`);
 
     const {spawn} = require('child_process');
     const child = spawn("sh", ["-c", execution_string]);
@@ -37,8 +32,5 @@ function firePipeline(answers) {
 
 let answersFilepath = `${__dirname}/answers.json`;
 answers = JSON.parse(fs.readFileSync(answersFilepath, 'utf8'));
-
-console.log(`answers: ${JSON.stringify(answers)}`);
-console.log();
 
 firePipeline(answers);

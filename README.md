@@ -5,7 +5,11 @@
 - `npm install`
 - `node watcher.js`
 
-alternatively add an alias with `echo 'alias jat="node `pwd`/watcher.js"' >> ~/.zshrc`
+alternatively add an alias to your shell, e.g.
+
+```text
+echo 'alias jat="node `pwd`/watcher.js"' >> ~/.zshrc
+```
 
 # Execution
 
@@ -32,15 +36,12 @@ To exit the runner, ctrl-c.
 
 # TO DO
 
-- Add a choice for declarative / groovy pipelines
-- Create an installer to 
+- Create an installer to
   - npm install
   - set an alias (alias watcher='node /Users/andrewfowler/projects/watcher/watcher.js')
   - curl the latest cli client (if appropriate)
 - Add cli client to /bin
 - Remove eg()s from questions if there is an existing answer
-- Figure out how to get rid of dummy index.js
 
 # Issues
-- Removing index.js causes nodemon to re-fire the _watcher_, not the pipeline, upon jenkinsfile changes
 - The Jenkins CLI can occasionally throw a StreamException, killing the local stream.

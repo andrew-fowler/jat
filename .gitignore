@@ -2,6 +2,7 @@
 answers.json
 node_modules/
 .idea/
+.vscode/
 
 # User-specific stuff:
 .idea/**/workspace.xml
